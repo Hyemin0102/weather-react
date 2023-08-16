@@ -1,70 +1,24 @@
-# Getting Started with Create React App
+<img src="https://github.com/Hyemin0102/weather-react/assets/128768462/c566f6d2-18dd-447e-808a-0d66cc57e1ce"/>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Weather-React
+OpenWeatherMap api 데이터를 연동한 날씨 앱
 
-## Available Scripts
+## 🔎프로젝트 소개
+https://main--silver-sundae-f117dc.netlify.app/
 
-In the project directory, you can run:
+리액트로 OpenWeatherMap api 데이터를 연동해 현재 위치를 파악하여 날씨를 알려주는 간단한 웹페이지입니다.
 
-### `yarn start`
+## ⚙개발 환경
+React, react-bootstrap, react-spinners, OpenWeatherMap api
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚩주요 기능
+- 앱 실행 시 현재 위치 기반 날씨 화면에 나타남(도시, 온도, 습도, 날씨 상태)
+- 다른 도시 버튼 클릭하면 해당 도시 날씨 나타남
+- 데이터 가져오는 동안 로딩 스피너 기능 구현
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📌코드 리뷰
 
-### `yarn test`
+## 😊프로젝트를 마치며
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
