@@ -9,7 +9,7 @@ export const WeatherBox = ({weather}) => {
         <h1 className='fw-semibold'>{weather?.main.temp}℃ / {weather?.main.humidity}%</h1>
         <div className='h3 fw-semibold'>{weather?.weather[0].description}</div>
         <div className='weather-icon'>
-          <img src={`https://openweathermap.org/img/wn/${iconNow}.png` }alt="weather"/>
+          <img src={`https://openweathermap.org/img/wn/${iconNow}.png` }/>
         </div>
     </div>
   )
