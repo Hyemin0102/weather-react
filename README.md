@@ -21,11 +21,15 @@ React, react-bootstrap, react-spinners, OpenWeatherMap api
 - [현재 위치 좌표 구하기](#현재-위치-좌표-구하기)
 - [좌표에 해당하는 실시간 날씨 데이터 구하기(fetch, awit/async)](#좌표에-해당하는-실시간-날씨-데이터-구하기)
 - [도시 별 실시간 날씨 데이터 구하기(fetch, awit/async)](#도시-별-실시간-날씨-데이터-구하기)
+- [받아온 외부 데이터 중 필요한 부분만 화면 출력](#받아온-외부-데이터-중-필요한-부분만-화면-출력)
+- [도시별 버튼 컴포넌트](#도시별-버튼-컴포넌트)
 
 <br>
 
-## 📌코드 리뷰
-- 현재 위치 좌표 구하기
+## 📌코드 리뷰📌
+
+
+## 현재 위치 좌표 구하기
 ```javascript
 const getCurrentLocation = () => {
     navigator.geolocation.getCurrentPosition((position) => {
@@ -39,7 +43,9 @@ navigator.geolocation.getCurrentPosition(successCallback, errorCallback, options
 
 위에서 구한 위도와 경도값을 해당 좌표의 날씨를 구해주는 함수에 매개변수로 보내준다.
 
-- 좌표에 해당하는 실시간 날씨 데이터 구하기(fetch, awit/async)
+<br>
+
+## 좌표에 해당하는 실시간 날씨 데이터 구하기
 
 ```javascript
 const getWeatherByCurrentLocation = async (lat, lon) => {
@@ -55,7 +61,10 @@ const getWeatherByCurrentLocation = async (lat, lon) => {
     }
   };
 ```
-- 도시 별 실시간 날씨 데이터 구하기(fetch, awit/async)
+
+<br>
+
+## 도시 별 실시간 날씨 데이터 구하기
 ```javascript
   const getWeatherByCity = async () => {
     setLoading(true);
@@ -84,8 +93,9 @@ const getWeatherByCurrentLocation = async (lat, lon) => {
     //eslint-disable-next-line
   }, [city]);
   ```
+<br>
 
-- 받아온 외부 데이터 중 필요한 부분만 화면 출력
+## 받아온 외부 데이터 중 필요한 부분만 화면 출력
 
 받아온 data를 weather에 업데이트 시켰는데 현재 이 weather에는 불필요한 정보까지 전부 들어가있으므로 내가 필요한 정보만 뽑아서 화면에 출력시켜야한다. 나는 도시 이름, 온도, 습도, 설명, 아이콘 이렇게 추출해 사용했다.
 ```javascript
@@ -103,8 +113,9 @@ export const WeatherBox = ({weather}) => {
   )
 }
 ```
+<br>
 
-- 도시별 버튼 컴포넌트
+## 도시별 버튼 컴포넌트
 
 내가 미리 지정한 도시명을 배열로 관리하고 배열 안의 아이템들을 버튼 컴포넌트로 만들어 해당 버튼 클릭 시 그 도시의 날씨 정보를 보여주는 기능을 구현해야한다. city 배열은 App.js에서 만들고 props로 버튼 컴포넌트에 전달시킴
 ```javascript
@@ -119,6 +130,7 @@ export const WeatherButton = ({cities,setCity}) => {
 ```
 이렇게 버튼 클릭시 city상태가 업데이트 되고 이것에 따라 위의 useEffect에서 설정했던 함수가 호출되어 날씨 데이터를 끌어오게 된다.
 
+<br>
 
 ## 😊프로젝트를 마치며
 외부 데이터를 활용해 간단한 토이 프로젝트를 만들어 보았는데 기능 구현은 완료하고 보니 간단한 것 같아도 처음 사용하는 api를 활용하는데 어려움이 있었다. 공식 사이트에서 제공하는 문법을 그대로 사용하면 되긴 하지만 처음 사용할 때는 이 부분을 찾는 것에 시간이 조금 걸렸고, 데이터를 받아온 이후에는 기본적인 useState, useEffect 훅을 사용해 오히려 이 부분이 더 쉽게 코드가 작성되었다. 몇가지 외부 api를 사용해보니 프론트엔드 개발자는 공식 문서를 잘 이해하고 올바르게 그리고 빠르게 제공되어 있는 오픈 코드를 활용하는 것도 중요한 능력이라고 느껴진다. 
