@@ -30,10 +30,10 @@ function App() {
       let response = await fetch(url); 
       let data = await response.json();
       setWeather(data); 
-      setLoading(false); 
     } catch(err){
       console.log(err);
     }
+    setLoading(false); 
   };
 
   //도시 이용해 날씨API 가져오기
@@ -45,10 +45,10 @@ function App() {
       let response = await fetch(url);
       let data = await response.json();
       setWeather(data);
-      setLoading(false);
     } catch(err){
       console.log(err);
     }
+    setLoading(false);
   };
 
   useEffect(() => {

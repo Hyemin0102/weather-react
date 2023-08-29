@@ -55,10 +55,10 @@ const getWeatherByCurrentLocation = async (lat, lon) => {
       let response = await fetch(url); 
       let data = await response.json();
       setWeather(data); 
-      setLoading(false); 
     } catch(err){
       console.log(err);
     }
+    setLoading(false); 
   };
 ```
 
@@ -70,13 +70,13 @@ const getWeatherByCurrentLocation = async (lat, lon) => {
     setLoading(true);
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid={API key}&units=metric`;
     try{
-      let response = await fetch(url);
+      let response = await fetch(url); 
       let data = await response.json();
-      setWeather(data);
-      setLoading(false);
+      setWeather(data); 
     } catch(err){
       console.log(err);
     }
+    setLoading(false); 
   };
 ```
 
