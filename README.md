@@ -29,9 +29,14 @@ const getCurrentLocation = () => {
 const getWeatherByCurrentLocation = async (lat, lon) => {
     setLoading(true);
     let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid={API key}&units=metric`;
-    let response = await fetch(url); 
-    let data = await response.json();
-    setLoading(false);
+     try{
+      let response = await fetch(url); 
+      let data = await response.json();
+      setWeather(data); 
+      setLoading(false); 
+    } catch(err){
+      console.log(err);
+    }
   };
 ```
 - 도시 별 날씨 api 데이터 가져오기(fetch)
@@ -39,10 +44,14 @@ const getWeatherByCurrentLocation = async (lat, lon) => {
   const getWeatherByCity = async () => {
     setLoading(true);
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid={API key}&units=metric`;
-    let response = await fetch(url);
-    let data = await response.json();
-    setWeather(data);
-    setLoading(false);
+    try{
+      let response = await fetch(url);
+      let data = await response.json();
+      setWeather(data);
+      setLoading(false);
+    } catch(err){
+      console.log(err);
+    }
   };
 ```
 

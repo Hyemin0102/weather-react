@@ -1,7 +1,6 @@
 import React from 'react'
 
 export const WeatherBox = ({weather}) => {
-  console.log('weather',weather)
   const iconNow=weather?.weather[0].icon
   return (
     <div className='weather-box'> 
