@@ -62,11 +62,15 @@ function App() {
     //eslint-disable-next-line
   }, [city]);
 
+  const LoadingSpinner = () =>{
+    return <FadeLoader color="#36d7b7" height={10} margin={2} width={5} />
+  }
+
   return (
     <>
       {loading ? ( //loading이 true면 FadeLoader만 보이고, loading 끝나면 내용 보임
         <div className="container">
-          <FadeLoader color="#36d7b7" height={10} margin={2} width={5} />
+          <LoadingSpinner/>
         </div>
       ) : (
         <div className="container">
